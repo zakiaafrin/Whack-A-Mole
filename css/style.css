@@ -1,0 +1,189 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+	box-sizing: border-box;	
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+	margin: 0;
+	padding: 0;
+}
+.wrapper {
+	width: 800px;
+	margin: 0 auto; 
+  height: 100%;
+  width: 100%;	
+	border: 3px solid black;
+	background-image: url('../img/background.png');
+	background-size: cover;
+	/* background-attachment: fixed; */
+  background-repeat: no-repeat;
+	padding: 10px;
+}
+header {
+	position: relative;
+}
+header:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+.result-board{
+	display: flex;
+	justify-content: space-between;
+}
+header h1 {
+	margin: 0;
+	float: left;
+}
+
+header .time-box {
+	width: 100px;
+	height: 70px;
+  border: 3px solid white;
+	background-color: #9c0505;
+  color: white;
+	border-radius: 20%;
+}
+header .score-box {
+	width: 100px;
+  border: 3px solid white;
+	background-color: #9c0505;
+  color: white;
+	border-radius: 20%;
+}
+header .mole-count {
+	width: 100px;
+  border: 3px solid white;
+	background-color: #9c0505;
+  color: white;
+	border-radius: 20%;
+}
+.time-box h3 {
+	margin-top: 0;
+	margin-bottom: 10px;
+	text-align: center;
+}
+.score-box h3 {
+	margin-top: 0;
+	margin-bottom: 10px;
+	text-align: center;
+}
+.mole-count h3 {
+	margin-top: 0;
+	margin-bottom: 10px;
+	text-align: center;
+}
+#countdown {
+  display: inline-block;
+	font-size: 20px;
+	text-align: center;
+	margin-left: 35%;
+}
+.score-box p {
+	font-size: 20px;
+	text-align: center;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+.mole-count p {
+	font-size: 20px;
+	text-align: center;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+.btn-start {
+	margin: 15px auto;
+	background-color: #9c0505;
+	color: white;
+	border-radius: 30%;
+	padding: 10px;
+	font-size: 16px;
+	font-weight: bold;
+}
+.game-container {
+	width: 600px;
+	margin: 30px auto;
+	
+}
+.row:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+.box {
+	width: 200px;
+	height: 200px;
+	padding: 10px;
+	float: left;
+	position: relative;
+	overflow: hidden;
+  cursor: url('../img/pointer.png'), auto;
+}
+.mole-pic {
+	width: 80px;
+	position: absolute;
+	left: 50px;
+	bottom: -109px;
+	z-index: 35;
+	transition: bottom 0.6s ease;
+}
+.mole-pic.up {
+	bottom: 0;
+}
+.mole-pic.bonked {
+	-webkit-animation-name: shake;
+    animation-name: shake;
+	-webkit-animation-duration: 0.6s;
+  	animation-duration: 0.6s;
+  	-webkit-animation-fill-mode: both;
+  	animation-fill-mode: both;
+}
+.dirt-pic {
+	position: absolute;
+	bottom: -22px;
+	left: 41px;
+	z-index: 1;
+}
+.mask {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 30px;
+	width: 100%;
+	z-index: 5000;
+}
+/* Animations */
+@-webkit-keyframes shake {
+  from, to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+}
+@keyframes shake {
+  from, to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+}

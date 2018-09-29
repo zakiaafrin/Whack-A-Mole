@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Whack A Mole</title>
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+	<div class="wrapper">
+		<header>
+			<div class="result-board">
+				<div class="time-box" id="time-box">
+					<h3>Time</h3>
+					<div class="countdown" id="countdown">15</div>S
+				</div>
+
+				<div>
+					<h1>Whack-a-Mole</h1>
+					<img src="./img/mole1.png" alt="Logo" style="height: 60px; width: 50px; margin-left: 10px;">
+				</div>
+
+				<div style="display: flex;">
+					<div class="score-box" id="score-box">
+						<h3>Score</h3>
+						<p class="score-out" id="score-out">0</p>
+					</div>
+
+					<div class="mole-count" id="mole-count">
+						<h3>Mole</h3>
+						<p class="mole_count" id="mole_count">0</p>
+					</div>
+				</div>
+			</div>
+			<!-- end score-box -->
+		</header>
+		<main>
+			<button class="btn-start" id="btn-start">Start Game</button>
+			<div class="game-container">
+				<div class="row">
+					<div class="box">
+						<img src="./img/mole3.png" alt="mole" class="mole-pic" id="mole-01">
+						<img src="./img/hole1.png" alt="dirt" class="dirt-pic">
+						<div class="mask"></div>
+						<!-- end mask -->
+					</div>
+					<!-- end box -->
+					<div class="box">
+						<img src="./img/mole3.png" alt="mole" class="mole-pic" id="mole-02">
+						<img src="./img/hole1.png" alt="dirt" class="dirt-pic">
+						<div class="mask"></div>
+						<!-- end mask -->
+					</div>
+					<!-- end box -->
+					<div class="box">
+						<img src="./img/mole3.png" alt="mole" class="mole-pic" id="mole-03">
+						<img src="./img/hole1.png" alt="dirt" class="dirt-pic">
+						<div class="mask"></div>
+						<!-- end mask -->
+					</div>
+					<!-- end box -->
+				</div>
+				<!-- end row -->
+				<div class="row">
+					<div class="box">
+						<img src="./img/mole3.png" alt="mole" class="mole-pic" id="mole-04">
+						<img src="./img/hole1.png" alt="dirt" class="dirt-pic">
+						<div class="mask"></div>
+						<!-- end mask -->
+					</div>
+					<!-- end box -->
+					<div class="box">
+						<img src="./img/mole3.png" alt="mole" class="mole-pic" id="mole-05">
+						<img src="./img/hole1.png" alt="dirt" class="dirt-pic">
+						<div class="mask"></div>
+						<!-- end mask -->
+					</div>
+					<!-- end box -->
+					<div class="box">
+						<img src="./img/mole3.png" alt="mole" class="mole-pic" id="mole-06">
+						<img src="./img/hole1.png" alt="dirt" class="dirt-pic">
+						<div class="mask"></div>
+						<!-- end mask -->
+					</div>
+					<!-- end box -->
+				</div>
+				<!-- end row -->
+			</div>
+			<!-- end game-container -->
+		</main>
+
+	</div>
+	<!-- end wrapper -->
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+	<script src="js/index.js"></script>
+</body>
+
+</html>
