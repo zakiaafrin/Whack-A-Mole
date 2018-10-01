@@ -45,6 +45,7 @@ class WhackAMole {
 			console.log('Game Over');
 			this.btnStart.text('Start Game');
 			this.timeUp = true;
+		alert('Game Over');
 		}, 15000);	
 		this.countdownTimer();	
 	}
