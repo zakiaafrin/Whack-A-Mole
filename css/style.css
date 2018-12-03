@@ -15,7 +15,7 @@ body {
   width: 100%;	
 	border: 3px solid black;
 	background-image: url('../img/background.png');
-	background-size: cover;
+	background-size: 100vw 100vh;
   background-repeat: no-repeat;
 	padding: 10px;
 }
@@ -121,10 +121,10 @@ header .mole-count {
   cursor: url('../img/pointer.png'), auto;
 }
 .mole-pic {
-	width: 80px;
+	width: 100px;
 	position: absolute;
-	left: 50px;
-	bottom: -109px;
+	left: 56px;
+	bottom: -136px;
 	z-index: 35;
 	transition: bottom 0.6s ease;
 }
@@ -144,6 +144,7 @@ header .mole-count {
 	bottom: -22px;
 	left: 41px;
 	z-index: 1;
+	width: 130px;
 }
 .mask {
 	position: absolute;

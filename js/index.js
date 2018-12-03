@@ -12,6 +12,8 @@ class WhackAMole {
 		// Game Images
 		this.moleImgSrc = './img/mole3.png';
 		this.moleBonkedImg = new Image();
+		this.audio = new Audio();
+		this.audio.src= 'whack.mp3';
 		this.moleBonkedImg.src = './img/mole2.png';
 		
 		// Game Parameters
@@ -81,6 +83,7 @@ countdownTimer() {
 }
 	
 	bonk(mole) {
+		this.audio.play();
 		mole.attr('src', this.moleBonkedImg.src)
     		.removeClass('up')
 			.addClass('bonked')
